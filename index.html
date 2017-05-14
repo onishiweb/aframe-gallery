@@ -12,7 +12,6 @@
 	</head>
 <body>
 	<a-scene antialias='true'>
-		<a-sky color="#fff"></a-sky>
 		<a-assets>
 			<img id="image-alice" src="portfolio/alice.png">
 			<!-- <img id="image-anna" src="portfolio/anna.jpg">
@@ -20,14 +19,18 @@
 			<img id="image-hometime" src="portfolio/hometime.jpg"> -->
 		</a-assets>
 
+		<!-- Main light -->
+		<a-entity position="0 50 75" rotation="0 0 0" light="color: #fff; type: point; intensity: 0.9;"></a-entity>
+
 		<a-entity position="0 0 15">
 		  <a-camera id="camera-one" active="false"></a-camera>
 		</a-entity>
 
 
 		<!-- Forward wall -->
-		<a-box width="125" height="70" depth="1" position="0 0 -30" color="#dedede" >
+		<a-box width="125" height="70" depth="1" position="0 0 -30" color="#fff">
 			<!-- Middle image -->
+			<!-- <a-entity position="0 -4 -4" rotation="0 0 20" light="color: #fff; type: spot"></a-entity> -->
 			<a-box width="30" height="24.9" depth="0.5" position="0 -3 0.6"></a-box>
 			<a-box width="8" height="2" depth="0.5" position="0 -18 0.6">
 				<a-text value="Alice" color="#000" position="0 0 0.25" scale="5 5 1" align="center"></a-text>
@@ -50,7 +53,7 @@
 		</a-box>
 
 		<!-- Left wall -->
-		<a-box width="200" height="70" depth="1" position="-62.5 0 70" rotation="0 90 0" color="#dedede" >
+		<a-box width="200" height="70" depth="1" position="-62.5 0 70" rotation="0 90 0" color="#fff" >
 
 			<a-entity position="0 0 80">
 			  <a-camera id="camera-two" active="false"></a-camera>
@@ -79,7 +82,7 @@
 		</a-box>
 
 		<!-- Right wall -->
-		<a-box width="200" height="70" depth="1" position="62.5 0 70" rotation="0 -90 0" color="#dedede">
+		<a-box width="200" height="70" depth="1" position="62.5 0 70" rotation="0 -90 0" color="#fff">
 			<a-entity position="-10 0 50">
 			  <a-camera id="camera-three" active="false"></a-camera>
 			</a-entity>
@@ -107,7 +110,7 @@
 		</a-box>
 
 		<!-- Behind wall -->
-		<a-box width="125" height="70" depth="1" position="0 0 170" rotation="0 180 0" color="#dedede">
+		<a-box width="125" height="70" depth="1" position="0 0 170" rotation="0 180 0" color="#fff">
 			<a-entity position="0 0 50">
 			  <a-camera id="camera-three" active="true"></a-camera>
 			</a-entity>
@@ -139,7 +142,6 @@
 
 		<!-- Ceiling -->
 		<a-plane height="200" width="125" rotation="-270 0 0" position="0 35 69.5" material="src: ceiling-tile.png; shader: flat; repeat: 20 20;"></a-plane>
-
 	</a-scene>
 	</body>
 </html>
