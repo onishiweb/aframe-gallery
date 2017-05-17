@@ -13,6 +13,7 @@
 <body>
 	<a-scene id="gallery-scene" antialias='true'>
 		<a-assets>
+			<!-- 52 Portraits -->
 			<img id="image-alice" src="portfolio/alice.jpg">
 			<img id="image-anna" src="portfolio/anna.jpg">
 			<img id="image-comic" src="portfolio/comic-book-lovers.jpg">
@@ -20,12 +21,12 @@
 			<img id="image-home" src="portfolio/hometime.jpg">
 			<img id="image-ines" src="portfolio/ines.jpg">
 			<img id="image-rebel" src="portfolio/rebel.jpg">
-
+			<!-- Markets -->
 			<img id="image-butchers" src="portfolio/butchers.jpg">
 			<img id="image-fishmongers" src="portfolio/fishmongers.jpg">
 			<img id="image-octopus" src="portfolio/octopus.jpg">
 			<img id="image-pancakes" src="portfolio/pancakes.jpg">
-
+			<!-- Discarded -->
 			<img id="image-hat" src="portfolio/post-hat.jpg">
 			<img id="image-skate" src="portfolio/skateboards.jpg">
 			<img id="image-door" src="portfolio/door-nowhere.jpg">
@@ -33,147 +34,147 @@
 		</a-assets>
 
 		<!-- Main light -->
-		<a-entity position="0 50 75" rotation="0 0 0" light="color: #fff; type: point; intensity: 0.9;"></a-entity>
+		<a-entity position="0 25 37.5" rotation="0 0 0" light="color: #fff; type: point; intensity: 0.9;"></a-entity>
 
-		<a-entity position="0 0 15">
+		<a-entity position="0 0 7.5">
 		  <a-camera id="camera-1" wasd-controls="acceleration:350;" active="true"></a-camera>
 		</a-entity>
 
 
 		<!-- Forward wall -->
-		<a-box width="125" height="70" depth="1" position="1 0 -30" color="#fff">
+		<a-box width="62.5" height="35" depth="0.25" position="0 0 -15" color="#fff">
 			<!-- Middle image: pancakes -->
-			<a-box width="18.7" height="12" depth="0.5" position="1 -3 0.6"></a-box>
-			<a-box width="4" height="1" depth="0.5" position="0 -18 0.6">
+			<a-box width="18.7" height="12" depth="0.25" position="0.25 -1.5 0.3"></a-box>
+			<a-box width="6" height="1" depth="0.25" position="0 -9 0.3">
 				<a-text value="Alice" color="#000" position="0 0 0.25" scale="5 5 1" align="center"></a-text>
 			</a-box>
-			<a-image src="#image-pancakes" width="18.7" height="12" depth="0.1" position="1 -3 0.9"></a-image>
+			<a-image src="#image-pancakes" width="18.7" height="12" depth="0.1" position="0.5 -1.5 0.45"></a-image>
 
 			<!-- Left image: fishmongers -->
-			<a-box width="17.95" height="12" depth="0.5" position="-40 -3 0.6"></a-box>
-			<a-box width="4" height="1" depth="0.5" position="-40 -18 0.6">
+			<a-box width="17.95" height="12" depth="0.25" position="-20 -1.5 0.3"></a-box>
+			<a-box width="6" height="1" depth="0.25" position="-20 -9 0.3">
 				<a-text value="Alice" color="#000" position="0 0 0.25" scale="5 5 1" align="center"></a-text>
 			</a-box>
-			<a-image src="#image-fishmongers" width="17.95" height="12" depth="0.1" position="-40 -3 0.9"></a-image>
+			<a-image src="#image-fishmongers" width="17.95" height="12" depth="0.1" position="-20 -1.5 0.45"></a-image>
 
 			<!-- Right image: octopus -->
-			<a-box width="16.15" height="12" depth="0.5" position="41 -3 0.6"></a-box>
-			<a-box width="4" height="1" depth="0.5" position="41 -18 0.6">
+			<a-box width="16.15" height="12" depth="0.25" position="20.5 -1.5 0.3"></a-box>
+			<a-box width="6" height="1" depth="0.25" position="20.5 -9 0.3">
 				<a-text value="Alice" color="#000" position="0 0 0.25" scale="5 5 1" align="center"></a-text>
 			</a-box>
-			<a-image src="#image-octopus" width="16.15" height="12" depth="0.1" position="41 -3 0.9"></a-image>
+			<a-image src="#image-octopus" width="16.15" height="12" depth="0.1" position="20.5 -1.5 0.45"></a-image>
 		</a-box>
 
 		<!-- Left wall -->
-		<a-box width="220" height="70" depth="1" position="-62.5 0 80" rotation="0 90 0" color="#fff" >
-			<a-entity position="0 0 80">
+		<a-box width="110" height="35" depth="0.25" position="-31.25 0 40" rotation="0 90 0" color="#fff" >
+			<a-entity position="0 0 30">
 			  <a-camera id="camera-2" active="false"></a-camera>
 			</a-entity>
 
 			<!-- Middle image: skate -->
-			<a-box width="35.9" height="24" depth="0.5" position="0 -3 0.6"></a-box>
-			<a-box width="8" height="2" depth="0.5" position="0 -18 0.6">
+			<a-box width="17.95" height="12" depth="0.25" position="0 -1.5 0.3"></a-box>
+			<a-box width="6" height="1" depth="0.25" position="0 -9 0.3">
 				<a-text value="Alice" color="#000" position="0 0 0.25" scale="5 5 1" align="center"></a-text>
 			</a-box>
-			<a-image src="#image-skate" width="35.9" height="24" depth="0.1" position="0 -3 0.9"></a-image>
+			<a-image src="#image-skate" width="17.95" height="12" depth="0.1" position="0 -1.5 0.45"></a-image>
 
 			<!-- Middle left image: door -->
-			<a-box width="35.6" height="24" depth="0.5" position="-41 -3 0.6"></a-box>
-			<a-box width="8" height="2" depth="0.5" position="-41 -18 0.6">
+			<a-box width="17.8" height="12" depth="0.25" position="-20.5 -1.5 0.3"></a-box>
+			<a-box width="6" height="1" depth="0.25" position="-20.5 -9 0.3">
 				<a-text value="Alice" color="#000" position="0 0 0.25" scale="5 5 1" align="center"></a-text>
 			</a-box>
-			<a-image src="#image-door" width="35.6" height="24" depth="0.1" position="-41 -3 0.9"></a-image>
+			<a-image src="#image-door" width="17.8" height="12" depth="0.1" position="-20.5 -1.5 0.45"></a-image>
 
 			<!-- Far Left image: carts  -->
-			<a-box width="37.3" height="24" depth="0.5" position="-82.5 -3 0.6"></a-box>
-			<a-box width="8" height="2" depth="0.5" position="-82.5 -18 0.6">
+			<a-box width="18.65" height="12" depth="0.25" position="-41.25 -1.5 0.3"></a-box>
+			<a-box width="6" height="1" depth="0.25" position="-41.25 -9 0.3">
 				<a-text value="Alice" color="#000" position="0 0 0.25" scale="5 5 1" align="center"></a-text>
 			</a-box>
-			<a-image src="#image-carts" width="37.3" height="24" depth="0.1" position="-82.5 -3 0.9"></a-image>
+			<a-image src="#image-carts" width="18.65" height="12" depth="0.1" position="-41.25 -1.5 0.45"></a-image>
 
 			<!-- Centre Right image: hat -->
-			<a-box width="33.6" height="24" depth="0.5" position="40.5 -3 0.6"></a-box>
-			<a-box width="8" height="2" depth="0.5" position="40.5 -18 0.6">
+			<a-box width="16.8" height="12" depth="0.25" position="20.25 -1.5 0.3"></a-box>
+			<a-box width="6" height="1" depth="0.25" position="20.25 -9 0.3">
 				<a-text value="Alice" color="#000" position="0 0 0.25" scale="5 5 1" align="center"></a-text>
 			</a-box>
-			<a-image src="#image-hat" width="33.6" height="24" depth="0.1" position="40.5 -3 0.9"></a-image>
+			<a-image src="#image-hat" width="16.8" height="12" depth="0.1" position="20.25 -1.5 0.45"></a-image>
 
 			<!-- Far right image: butchers -->
-			<a-box width="36" height="24" depth="0.5" position="84.5 -3 0.6"></a-box>
-			<a-box width="8" height="2" depth="0.5" position="84.5 -18 0.6">
+			<a-box width="18" height="12" depth="0.25" position="42.25 -1.5 0.3"></a-box>
+			<a-box width="6" height="1" depth="0.25" position="42.25 -9 0.3">
 				<a-text value="Alice" color="#000" position="0 0 0.25" scale="5 5 1" align="center"></a-text>
 			</a-box>
-			<a-image src="#image-butchers" width="36" height="24" depth="0.1" position="84.5 -3 0.9"></a-image>
+			<a-image src="#image-butchers" width="18" height="12" depth="0.1" position="42.25 -1.5 0.45"></a-image>
 		</a-box>
 
 		<!-- Right wall -->
-		<a-box width="220" height="70" depth="1" position="62.5 0 80" rotation="0 -90 0" color="#fff">
-			<a-entity position="-10 0 50">
+		<a-box width="110" height="35" depth="0.25" position="31.25 0 40" rotation="0 -90 0" color="#fff">
+			<a-entity position="-5 0 25">
 			  <a-camera id="camera-3" active="false"></a-camera>
 			</a-entity>
 
 			<!-- Middle left image -->
-			<a-box width="35.9" height="24" depth="0.5" position="-17 -3 0.6"></a-box>
-			<a-box width="8" height="2" depth="0.5" position="-17 -18 0.6">
+			<a-box width="17.95" height="12" depth="0.25" position="-8.5 -1.5 0.3"></a-box>
+			<a-box width="6" height="1" depth="0.25" position="-8.5 -9 0.3">
 				<a-text value="Comic book lovers" color="#000" position="0 0 0.25" scale="5 5 1" align="center"></a-text>
 			</a-box>
-			<a-image src="#image-comic" width="35.9" height="24" depth="0.1" position="-17 -3 0.9"></a-image>
+			<a-image src="#image-comic" width="17.95" height="12" depth="0.1" position="-8.5 -1.5 0.45"></a-image>
 
 			<!-- Middle right image -->
-			<a-box width="35" height="24" depth="0.5" position="32 -3 0.6"></a-box>
-			<a-box width="8" height="2" depth="0.5" position="32 -18 0.6">
+			<a-box width="17.5" height="12" depth="0.25" position="16 -1.5 0.3"></a-box>
+			<a-box width="6" height="1" depth="0.25" position="16 -9 0.3">
 				<a-text value="Hometime" color="#000" position="0 0 0.25" scale="5 5 1" align="center"></a-text>
 			</a-box>
-			<a-image src="#image-home" width="35" height="24" depth="0.1" position="32 -3 0.9"></a-image>
+			<a-image src="#image-home" width="17.5" height="12" depth="0.1" position="16 -1.5 0.45"></a-image>
 
 			<!-- Left image -->
-			<a-box width="39.3" height="24" depth="0.5" position="-68 -3 0.6"></a-box>
-			<a-box width="8" height="2" depth="0.5" position="-68 -18 0.6">
+			<a-box width="19.65" height="12" depth="0.25" position="-34 -1.5 0.3"></a-box>
+			<a-box width="6" height="1" depth="0.25" position="-34 -9 0.3">
 				<a-text value="Game time" color="#000" position="0 0 0.25" scale="5 5 1" align="center"></a-text>
 			</a-box>
-			<a-image src="#image-game" width="39.3" height="24" depth="0.1" position="-68 -3 0.9"></a-image>
+			<a-image src="#image-game" width="19.65" height="12" depth="0.1" position="-34 -1.5 0.45"></a-image>
 
 			<!-- Right image -->
-			<a-box width="35.3" height="24" depth="0.5" position="80 -3 0.6"></a-box>
-			<a-box width="8" height="2" depth="0.5" position="80 -18 0.6">
+			<a-box width="17.65" height="12" depth="0.25" position="40 -1.5 0.3"></a-box>
+			<a-box width="6" height="1" depth="0.25" position="40 -9 0.3">
 				<a-text value="Rebel" color="#000" position="0 0 0.25" scale="5 5 1" align="center"></a-text>
 			</a-box>
-			<a-image src="#image-rebel" width="35.3" height="24" depth="0.1" position="80 -3 0.9"></a-image>
+			<a-image src="#image-rebel" width="17.65" height="12" depth="0.1" position="40 -1.5 0.45"></a-image>
 		</a-box>
 
 		<!-- Behind wall -->
-		<a-box width="125" height="70" depth="1" position="0 0 190" rotation="0 180 0" color="#fff">
-			<a-entity position="0 0 50">
+		<a-box width="62.5" height="35" depth="0.25" position="0 0 95" rotation="0 180 0" color="#fff">
+			<a-entity position="0 0 25">
 			  <a-camera id="camera-4" active="false"></a-camera>
 			</a-entity>
 
 			<!-- Middle image: Ines -->
-			<a-box width="36" height="24" depth="0.5" position="-2.5 -3 0.6"></a-box>
-			<a-box width="8" height="2" depth="0.5" position="-2.5 -18 0.6">
+			<a-box width="18" height="12" depth="0.25" position="-1.25 -1.5 0.3"></a-box>
+			<a-box width="6" height="1" depth="0.25" position="-1.25 -9 0.3">
 				<a-text value="Ines" color="#000" position="0 0 0.25" scale="5 5 1" align="center"></a-text>
 			</a-box>
-			<a-image src="#image-ines" width="36" height="24" depth="0.1" position="-2.5 -3 0.9"></a-image>
+			<a-image src="#image-ines" width="18" height="12" depth="0.1" position="-1.25 -1.5 0.45"></a-image>
 
 			<!-- Left image: Alice -->
-			<a-box width="28.9" height="24" depth="0.5" position="-41.5 -3 0.6"></a-box>
-			<a-box width="8" height="2" depth="0.5" position="-41.5 -18 0.6">
+			<a-box width="14.45" height="12" depth="0.25" position="-20.75 -1.5 0.3"></a-box>
+			<a-box width="6" height="1" depth="0.25" position="-20.75 -9 0.3">
 				<a-text value="Alice" color="#000" position="0 0 0.25" scale="5 5 1" align="center"></a-text>
 			</a-box>
-			<a-image src="#image-alice" width="28.9" height="24" depth="0.1" position="-41.5 -3 0.9"></a-image>
+			<a-image src="#image-alice" width="14.45" height="12" depth="0.1" position="-20.75 -1.5 0.45"></a-image>
 
 			<!-- Right image: Anna -->
-			<a-box width="35.9" height="24" depth="0.5" position="39.5 -3 0.6"></a-box>
-			<a-box width="8" height="2" depth="0.5" position="39.5 -18 0.6">
+			<a-box width="17.95" height="12" depth="0.25" position="19.75 -1.5 0.3"></a-box>
+			<a-box width="6" height="1" depth="0.25" position="19.75 -9 0.3">
 				<a-text value="Anna" color="#000" position="0 0 0.25" scale="5 5 1" align="center"></a-text>
 			</a-box>
-			<a-image src="#image-anna" width="35.9" height="24" depth="0.1" position="39.5 -3 0.9"></a-image>
+			<a-image src="#image-anna" width="17.95" height="12" depth="0.1" position="19.75 -1.5 0.45"></a-image>
 		</a-box>
 
 		<!-- Ground -->
-		<a-plane height="220" width="125" rotation="-90 0 0" position="0 -35 79.5" material="src: white-wood.jpg; shader: flat; repeat: 6 6;"></a-plane>
+		<a-plane height="110" width="62.5" rotation="-90 0 0" position="0 -17.5 39.75" material="src: white-wood.jpg; shader: flat; repeat: 6 6;"></a-plane>
 
 		<!-- Ceiling -->
-		<a-plane height="220" width="125" rotation="-270 0 0" position="0 35 79.5" material="src: ceiling-tile.png; shader: flat; repeat: 20 20;"></a-plane>
+		<a-plane height="110" width="62.5" rotation="-270 0 0" position="0 17.5 39.75" material="src: ceiling-tile.png; shader: flat; repeat: 20 20;"></a-plane>
 	</a-scene>
 
 	<script type="text/javascript">
