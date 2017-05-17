@@ -11,7 +11,7 @@
 		<script src="aframe.min.js"></script>
 	</head>
 <body>
-	<a-scene antialias='true'>
+	<a-scene id="gallery-scene" antialias='true'>
 		<a-assets>
 			<img id="image-alice" src="portfolio/alice.jpg">
 			<img id="image-anna" src="portfolio/anna.jpg">
@@ -36,7 +36,7 @@
 		<a-entity position="0 50 75" rotation="0 0 0" light="color: #fff; type: point; intensity: 0.9;"></a-entity>
 
 		<a-entity position="0 0 15">
-		  <a-camera id="camera-one" wasd-controls="acceleration:350;" active="true"></a-camera>
+		  <a-camera id="camera-1" wasd-controls="acceleration:350;" active="true"></a-camera>
 		</a-entity>
 
 
@@ -67,7 +67,7 @@
 		<!-- Left wall -->
 		<a-box width="220" height="70" depth="1" position="-62.5 0 80" rotation="0 90 0" color="#fff" >
 			<a-entity position="0 0 80">
-			  <a-camera id="camera-two" active="false"></a-camera>
+			  <a-camera id="camera-2" active="false"></a-camera>
 			</a-entity>
 
 			<!-- Middle image: skate -->
@@ -109,7 +109,7 @@
 		<!-- Right wall -->
 		<a-box width="220" height="70" depth="1" position="62.5 0 80" rotation="0 -90 0" color="#fff">
 			<a-entity position="-10 0 50">
-			  <a-camera id="camera-three" active="false"></a-camera>
+			  <a-camera id="camera-3" active="false"></a-camera>
 			</a-entity>
 
 			<!-- Middle left image -->
@@ -144,7 +144,7 @@
 		<!-- Behind wall -->
 		<a-box width="125" height="70" depth="1" position="0 0 190" rotation="0 180 0" color="#fff">
 			<a-entity position="0 0 50">
-			  <a-camera id="camera-four" active="false"></a-camera>
+			  <a-camera id="camera-4" active="false"></a-camera>
 			</a-entity>
 
 			<!-- Middle image: Ines -->
@@ -175,5 +175,25 @@
 		<!-- Ceiling -->
 		<a-plane height="220" width="125" rotation="-270 0 0" position="0 35 79.5" material="src: ceiling-tile.png; shader: flat; repeat: 20 20;"></a-plane>
 	</a-scene>
+
+	<script type="text/javascript">
+		var scene = document.querySelector('#gallery-scene');
+		var camera = 1;
+
+		scene.addEventListener('click', function() {
+
+			var currentCam = '#camera-' + camera;
+			if (camera < 3) {
+				camera++;
+			} else {
+				camera = 1;
+			}
+
+			var nextCam = '#camera-' + camera;
+
+			document.querySelector(currentCam).setAttribute('active', false);
+			document.querySelector(nextCam).setAttribute('active', true);
+		}, false);
+	</script>
 	</body>
 </html>
